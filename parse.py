@@ -2,6 +2,7 @@ import csv
 import json
 
 class Control:
+
     def __init__(self, id, title, properties):
         self.id = id
         self.title = title
@@ -21,6 +22,13 @@ class Property:
     def to_dict(self):
         return  {'control policies ': prop_1, 'enforcement mechanisms': prop_2 , 'other systems':  prop_3, 'access authorizations' :  prop_4}
 
+    def __init__(self, id, title, prose):
+        self.id = id
+        self.title = title
+        self.prose = prose
+
+    def to_dict(self):
+        return  {'id': self.id, 'title': self.title , 'prose': self.prose}
 
 filepath = input("Enter filepath: ")
 
