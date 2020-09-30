@@ -2,6 +2,26 @@ import csv
 import json
 
 class Control:
+
+    def __init__(self, id, title, properties):
+        self.id = id
+        self.title = title
+        self.properties = properties
+
+    def to_dict(self):
+        return  {'id': self.id, 'title': self.title , 'properties': self.properties}
+
+    ############### UNFINISHED this would be nested part of JSON. properties would break up into sub properties  ###################
+class Property:
+    def __init__(self, prop_1, prop_2, prop_3, prop_4):
+        self.prop_1 = prop_1
+        self.prop_2 = prop_2
+        self.prop_3 = prop_3
+        self.prop_4 = prop_4
+
+    def to_dict(self):
+        return  {'control policies ': prop_1, 'enforcement mechanisms': prop_2 , 'other systems':  prop_3, 'access authorizations' :  prop_4}
+
     def __init__(self, id, title, prose):
         self.id = id
         self.title = title
